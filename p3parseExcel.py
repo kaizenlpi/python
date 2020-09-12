@@ -1,6 +1,12 @@
-# Author: Matt Brady
-# Purpose: This script will parse row 301 to row 6197 in column 2 to get the computer hostnames.
-# Written in python3.6
+''' 
+Author: Matt Brady
+Written in python 3.6.8
+Purpose: This script will parse row 301 to row 6197 in column 2 to get the computer hostnames.
+It will not print out the unicode formatting like u'(somevalue)
+
+'''
+
+#!/bin/user/env python3
 import openpyxl
 wb = openpyxl.load_workbook('AnsibleReadinessReviewIP.xlsx')
 sheet = wb['CIsIPaddresses']
