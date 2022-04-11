@@ -3,7 +3,7 @@
 # Purpose: This script opens an ssh connection via paramiko module, runs ls, and prints the result to the screen. 
 # This was a proof of concept to verify if we could use paramiko to connect to one of the 16 avamar (backup) grid servers.
 # Note: The vars below could be used below if the script were to grow. 
-# Example Proof of Concept helpful: https://www.adamsmith.haus/python/answers/how-to-ssh-using-paramiko-in-python
+# Example Proof of Concept was helpful: https://www.adamsmith.haus/python/answers/how-to-ssh-using-paramiko-in-python
 
 import pexpect
 import paramiko
