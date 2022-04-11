@@ -4,6 +4,8 @@
 # This was a proof of concept to verify if we could use paramiko to connect to one of the 16 avamar (backup) grid servers.
 # Note: The vars below could be used below if the script were to grow. 
 # Example Proof of Concept was helpful: https://www.adamsmith.haus/python/answers/how-to-ssh-using-paramiko-in-python
+# https://stackoverflow.com/questions/25409977/paramiko-module-object-has-no-attribute-error-sshclient
+
 
 import pexpect
 import paramiko
