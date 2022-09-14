@@ -41,9 +41,8 @@ for grid in gridarray:
     dataNode.set("grid_ip", grid) # grid_ip is an attribute
     tree._setroot(dataNode)
     print(dataNode)
-    for resultNode in root.findall("Results]"): # removing the <Results> node from the XML      
-    output
-         root.remove(resultNode)
+    for resultNode in root.findall("Results]"): # removing the <Results> node from the XML output
+        root.remove(resultNode)
     tree.write("grid_" + grid + ".xml")
     #b_xml = tree.tostring()
     #with open("grid_" + grid + ".xml", mode='wb', encoding='utf-8') as out_file:
