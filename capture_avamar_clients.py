@@ -36,15 +36,16 @@ for grid in gridarray:
     #lines = stdout.readlines()
     #print(lines)
     lines = stderr.readlines()
-    print(stdout) 
-    # Assuming to capture output here. 
-    #ATTEMPT 1
-    #gridData = open('gridoutput.xml', "wb")
-    #tree.write(f)
-    #ATTEMPT2
-    xml_data = "<root>...</root>"
-    print(canonicalize(xml_data))
-    with open("grid_output.xml", mode='w', encoding='utf-8') as out_file:
-        canonicalize(xml_data, out=out_file)
+    dataNode = tree.find("Data")
+    dataNode.set("grid_ip", grid) # grid_ip is an attribute
+    tree._setroot(dataNode)
+    print(dataNode)
+    for resultNode in root.findall("Results]"): # removing the <Results> node from the XML      
+    output
+         root.remove(resultNode)
+    tree.write("grid_" + grid + ".xml")
+    #b_xml = tree.tostring()
+    #with open("grid_" + grid + ".xml", mode='wb', encoding='utf-8') as out_file:
+        #out_file.write(b_xml)
     ssh.close()
     print("---stopping gridname:"+ grid)
