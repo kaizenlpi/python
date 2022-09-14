@@ -1,3 +1,4 @@
+# Description: This script sets the avamar grids as variables, connects to each grid via ssh, runs a for loop block of code to display the avamar clients/servers in XML output, then removes the Results node from output, and saves the file with the grid_ipaddress in the filename. 
 # NOTE: mccli is avamar CLI. 
 
 import pexpect
@@ -28,7 +29,7 @@ ssh.set_missing_host_key_policy(paramiko.AutoAddPolicy())
 # NOTE: block - for loop runs to connect to each grid, then runs command and captures output before making conncetion to next server
 for grid in gridarray:
     print("---starting gridname:"+ grid)
-    ssh.connect(hostname=grid, username='uipath', password='Texas123$')
+    ssh.connect(hostname=grid, username='admin', password='superSecretPassword')
     stdin, stdout, stderr = ssh.exec_command(command)
     tree=ET.parse(stdout)
     root=tree.getroot()
